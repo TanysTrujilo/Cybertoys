@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marketplace para comprar, vender e trocar Transformers colecionáveis.">
+    <title>CyberToys | Marketplace Transformers</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <a class="marca" href="index.html"><img src="imagens/bumblebee.png" alt="Bumblebee" class="marca-icone"> CYBER<span>TOYS</span></a>
+        <nav class="menu" aria-label="Menu principal">
+            <a class="ativo" href="index.html">Início</a>
+            <a href="anunciar.html">Anunciar toy</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="login.html">Login</a>
+            <a href="admin.html">⚙ Admin</a>
+        </nav>
+        <div class="acoes-cabecalho">
+            <button type="button" id="alternarIdioma" class="botao-tema" title="Alternar idioma" aria-label="Alternar idioma">🌐</button>
+            <button type="button" id="alternarTema" class="botao-tema" title="Alternar tema" aria-label="Alternar tema">🌙</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner">
+            <div class="banner-conteudo">
+                <span class="etiqueta">MERCADO DOS COLECIONADORES</span>
+                <h1>Sua próxima transformação começa aqui!</h1>
+                <p>Encontre, venda e troque Transformers. Dê um novo destino para aquele toy especial e encontre a peça que falta na sua coleção.</p>
+                <div class="acoes">
+                    <a class="botao botao-amarelo" href="anunciar.html">＋ Anunciar meu toy</a>
+                    <a class="botao botao-contorno" href="#anuncios">Explorar anúncios</a>
+                </div>
+            </div>
+            <div class="banner-arte">
+				<img src="imagens/botcon.png" alt="Cabeça do Bumblebee">
+			</div>
+        </section>
+
+        <section class="faixa-beneficios" aria-label="Vantagens">
+            <article><span class="icone">🔄</span><div><h3>Trocas</h3><p>Negocie por aquela peça desejada.</p></div></article>
+            <article><span class="icone">🛒</span><div><h3>Vendas</h3><p>Encontre novos colecionadores.</p></div></article>
+            <article><span class="icone">🛡️</span><div><h3>Transparência</h3><p>Confira o estado de cada toy.</p></div></article>
+        </section>
+
+        <section class="secao" id="anuncios">
+            <div class="titulo-secao">
+                <div><span class="etiqueta texto-azul">VITRINE CYBERTOYS</span><h2>Anúncios em destaque</h2><p>Peças anunciadas pela comunidade de colecionadores.</p></div>
+                <a class="link-seta" href="anunciar.html">Publicar anúncio →</a>
+            </div>
+            <div class="filtros">
+                <label class="campo-pesquisa">⌕ <input type="search" id="pesquisaToy" placeholder="Buscar por personagem, linha ou fabricante..." aria-label="Pesquisar anúncios"></label>
+                <select id="filtroTipo" aria-label="Filtrar tipo de anúncio">
+                    <option value="todos">Todos os anúncios</option>
+                    <option value="Venda">Somente venda</option>
+                    <option value="Troca">Somente troca</option>
+                </select>
+            </div>
+            <div class="grade-anuncios" id="listaToys">
+                <article class="card-toy">
+                    <img src="imagens/optimus.jpg" alt="Figura de robô colecionável">
+                    <div class="card-conteudo"><span class="tag-venda">Venda</span><h3>Optimus Prime</h3><p>Animated • Hasbro</p><p class="estado">Estado: Muito bem conservado</p><strong>R$ 850,00</strong></div>
+                </article>
+                <article class="card-toy">
+                    <img src="imagens/sideswipe.jpg" alt="Brinquedo robô de coleção">
+                    <div class="card-conteudo"><span class="tag-troca">Troca</span><h3>Sideswipe</h3><p>War For Cybertron • Hasbro</p><p class="estado">Estado: Bom, com marcas de uso</p><strong>Procura-se troca</strong></div>
+                </article>
+                <article class="card-toy">
+                    <img src="imagens/jetpack.jpg" alt="Colecionável em exposição">
+                    <div class="card-conteudo"><span class="tag-venda">Venda</span><h3>Jetpack Bumblebee</h3><p>Animated • Takara Tomy</p><p class="estado">Estado: Excelente, completo</p><strong>R$ 1380,00</strong></div>
+                </article>
+            </div>
+            <p class="aviso-lista" id="mensagemVazia" hidden>Nenhum anúncio encontrado. Tente outra pesquisa.</p>
+        </section>
+
+        <section class="chamada">
+            <div><span class="etiqueta">FAÇA PARTE DA COMUNIDADE</span><h2>Tem um Transformer parado na prateleira?</h2><p>Cadastre sua peça, conte sua história e encontre alguém que valorize sua coleção.</p></div>
+            <a class="botao botao-amarelo" href="anunciar.html">Cadastrar um toy</a>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div><a class="marca" href="index.html"><img src="imagens/bumblebee.png" alt="Bumblebee" class="marca-icone"> CYBER<span>TOYS</span></a><p>Um ponto de encontro para colecionadores Transformers.</p></div>
+        <div class="links-rodape"><a href="index.html">Início</a><a href="cadastro.html">Criar conta</a><a href="admin.html">Admin</a><a href="https://www.linkedin.com/in/tanys-lopes-trujilo-b41bb73b9/">Meu currículo</a></div>
+        <p class="copyright">© 2026 CyberToys. Projeto acadêmico sem finalidade comercial.</p>
+    </footer>
+</body>
+</html>

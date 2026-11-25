@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração | CyberToys</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+        <header class="cabecalho">
+        <a class="marca" href="index.html"><img src="imagens/bumblebee.png" alt="Bumblebee" class="marca-icone"> CYBER<span>TOYS</span></a>
+        <nav class="menu" aria-label="Menu principal">
+            <a href="index.html">Início</a>
+            <a href="anunciar.html">Anunciar toy</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="login.html">Login</a>
+            <a class="ativo" href="admin.html">⚙ Admin</a>
+        </nav>
+        <div class="acoes-cabecalho">
+            <button type="button" id="alternarIdioma" class="botao-tema" title="Alternar idioma" aria-label="Alternar idioma">🌐</button>
+            <button type="button" id="alternarTema" class="botao-tema" title="Alternar tema" aria-label="Alternar tema">🌙</button>
+        </div>
+    </header>
+
+    <main class="pagina-formulario pagina-larga">
+        <section class="painel-formulario">
+            <span class="etiqueta texto-azul">ÁREA ADMINISTRATIVA</span>
+            <h1>Gerenciar usuários</h1>
+            <p>Cadastre usuários e gerencie os registros armazenados no Local Storage deste navegador.</p>
+            <form id="formAdmin" class="formulario grade-formulario">
+                <label>Nome do usuário<input type="text" id="nomeAdmin" required placeholder="Nome completo"></label>
+                <label>E-mail<input type="email" id="emailAdmin" required placeholder="usuario@email.com"></label>
+                <div class="acoes-form campo-completo">
+                    <button class="botao botao-azul" type="submit">Cadastrar</button>
+                    <button class="botao botao-neutro" type="reset" id="limparAdmin">Limpar campos</button>
+                </div>
+            </form>
+            <div class="area-lista">
+                <div class="titulo-lista"><h2>Usuários cadastrados</h2><button class="botao botao-perigo" id="excluirTodos" type="button">Excluir todos</button></div>
+                <label class="campo-pesquisa">⌕ <input type="search" id="pesquisaAdmin" placeholder="Pesquisar por nome ou e-mail..."></label>
+                <ul id="listaUsuarios" class="lista-usuarios"></ul>
+                <p id="semUsuarios" class="aviso-lista" hidden>Nenhum usuário cadastrado.</p>
+            </div>
+            <p class="mensagem-form" id="mensagemAdmin" aria-live="polite"></p>
+			<section class="area-lista">
+    <div class="titulo-lista">
+        <h2>Anúncios (Toys) cadastrados</h2>
+        <button type="button" id="excluirTodosToys" class="botao botao-perigo">Excluir todos</button>
+    </div>
+    <ul id="listaToysAdmin" class="lista-usuarios"></ul>
+    <p id="semToysAdmin" class="aviso-lista">Nenhum anúncio cadastrado.</p>
+</section>
+
+        </section>
+    </main>
+    <footer class="rodape rodape-simples"><p>© 2026 CyberToys — Projeto acadêmico.</p><a href="index.html">Voltar ao início</a></footer>
+</body>
+</html>

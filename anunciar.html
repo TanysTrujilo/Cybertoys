@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anunciar Transformer | CyberToys</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <a class="marca" href="index.html"><img src="imagens/bumblebee.png" alt="Bumblebee" class="marca-icone"> CYBER<span>TOYS</span></a>
+        <nav class="menu" aria-label="Menu principal">
+            <a href="index.html">Início</a>
+            <a class="ativo" href="anunciar.html">Anunciar toy</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="login.html">Login</a>
+            <a href="admin.html">⚙ Admin</a>
+        </nav>
+        <div class="acoes-cabecalho">
+            <button type="button" id="alternarIdioma" class="botao-tema" title="Alternar idioma" aria-label="Alternar idioma">🌐</button>
+            <button type="button" id="alternarTema" class="botao-tema" title="Alternar tema" aria-label="Alternar tema">🌙</button>
+        </div>
+    </header>
+
+    <main class="pagina-formulario pagina-larga">
+        <section class="painel-formulario">
+            <span class="etiqueta texto-azul">NOVO ANÚNCIO</span>
+            <h1>Cadastre seu Transformer</h1>
+            <p>Conte aos colecionadores tudo o que precisam saber sobre sua peça. Os anúncios ficam salvos neste navegador.</p>
+            <form id="formToy" class="formulario grade-formulario">
+                <label>Nome do toy<input type="text" name="nome" required placeholder="Ex.: Optimus Prime"></label>
+                <label>Personagem<input type="text" name="personagem" required placeholder="Ex.: Optimus Prime"></label>
+                <label>Fabricante<input type="text" name="fabricante" required placeholder="Ex.: Hasbro / Takara Tomy"></label>
+                <label>Linha / coleção<input type="text" name="linha" placeholder="Ex.: Studio Series"></label>
+                <label>Tipo de anúncio<select name="tipo" id="tipoAnuncio" required><option value="Venda">Venda</option><option value="Troca">Troca</option><option value="Venda ou troca">Venda ou troca</option></select></label>
+                <label>Preço (R$)<input type="number" name="preco" id="precoToy" min="0" step="0.01" placeholder="Ex.: 250,00"></label>
+                <label>Estado de conservação<select name="estado" required><option value="">Selecione</option><option>Na caixa / lacrado</option><option>Como novo</option><option>Muito bem conservado</option><option>Bom, com marcas de uso</option><option>Desgastado</option><option>Para restauração</option></select></label>
+                <label>Condição das peças<select name="condicao" required><option value="">Selecione</option><option>Completo, sem defeitos</option><option>Completo, com defeitos</option><option>Faltam acessórios ou peças</option><option>Não testado</option></select></label>
+                <label class="campo-completo">Defeitos, danos ou peças faltantes<textarea name="defeitos" rows="3" placeholder="Descreva trincas, riscos, peças ausentes, problemas nas articulações etc."></textarea></label>
+                <label class="campo-completo">Descrição adicional<textarea name="descricao" rows="4" required placeholder="Fale sobre pintura, articulações, caixa, acessórios e detalhes importantes."></textarea></label>
+                <label class="campo-completo">Foto do Transformer<input type="file" name="foto" id="fotoToy" accept="image/*"><small>Escolha uma foto do seu dispositivo. Prefira imagens nítidas da peça.</small></label>
+                <div class="campo-completo"><img id="previaFoto" class="previa-foto" alt="Prévia da foto selecionada" hidden></div>
+                <button class="botao botao-azul campo-completo" type="submit">Publicar anúncio</button>
+            </form>
+            <p class="mensagem-form" id="mensagemToy" aria-live="polite"></p>
+        </section>
+    </main>
+    <footer class="rodape rodape-simples"><p>© 2026 CyberToys — Projeto acadêmico.</p><a href="index.html">Voltar à vitrine</a></footer>
+</body>
+</html>

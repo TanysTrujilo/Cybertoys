@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | CyberToys</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <a class="marca" href="index.html"><img src="imagens/bumblebee.png" alt="Bumblebee" class="marca-icone"> CYBER<span>TOYS</span></a>
+        <nav class="menu" aria-label="Menu principal">
+            <a href="index.html">Início</a>
+            <a href="anunciar.html">Anunciar toy</a>
+            <a class="ativo" href="cadastro.html">Cadastro</a>
+            <a href="login.html">Login</a>
+            <a href="admin.html">⚙ Admin</a>
+        </nav>
+        <div class="acoes-cabecalho">
+            <button type="button" id="alternarIdioma" class="botao-tema" title="Alternar idioma" aria-label="Alternar idioma">🌐</button>
+            <button type="button" id="alternarTema" class="botao-tema" title="Alternar tema" aria-label="Alternar tema">🌙</button>
+        </div>
+    </header>
+
+    <main class="pagina-formulario">
+        <section class="painel-formulario">
+            <span class="etiqueta texto-azul">JUNTE-SE À COMUNIDADE</span>
+            <h1>Crie sua conta</h1>
+            <p>Cadastre-se para participar do marketplace de colecionadores.</p>
+            <form id="formCadastro" class="formulario">
+                <label>Nome completo<input type="text" name="nome" required minlength="3" placeholder="Seu nome"></label>
+                <label>E-mail<input type="email" name="email" required placeholder="voce@email.com"></label>
+                <label>Telefone<input type="tel" name="telefone" required placeholder="(00) 00000-0000"></label>
+                <label>Nome de usuário<input type="text" name="usuario" required minlength="3" placeholder="Como será conhecido"></label>
+                <label>Senha<input type="password" name="senha" required minlength="6" placeholder="Mínimo de 6 caracteres"></label>
+                <button class="botao botao-azul largura-total" type="submit">Cadastrar</button>
+            </form>
+            <p class="mensagem-form" id="mensagemCadastro" aria-live="polite"></p>
+            <p class="texto-centro">Já possui uma conta? <a href="login.html">Acesse o login</a>.</p>
+        </section>
+    </main>
+    <footer class="rodape rodape-simples"><p>© 2026 CyberToys — Projeto acadêmico.</p><a href="index.html">Voltar ao início</a></footer>
+</body>
+</html>
